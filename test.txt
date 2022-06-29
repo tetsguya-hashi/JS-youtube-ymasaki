@@ -1,0 +1,30 @@
+<div class="header"></div>
+<div class="left"></div>
+<div class="center"></div>
+<div class="right"></div>
+<div class="footer"></div>
+<header class="header"></header>
+<footer id="footer"></footer>
+<a href ="https://gsacademy.jp"></a>
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<h1>Hello G's!</h1>
+<h2>Hello G's!</h2>
+<h3>Hello G's!</h3>
+<h4>Hello World!</h4>
+<h5>Hello World!</h5>
+<h6>Hello World!</h6>
+<span>...</span>
+<a href="google.com">Google</a>
+<img src="gszou.jpg" alt="tomato">
+<input type="text" name="email" value="">
+<input type="text" name="tel" value="">
+<input type="text" name="address" value="">
+<input type="password" name="password" value="">
+<textarea name="memo"></textarea>
+color:#FF0000;
+margin:0 10px;
+font-size:16px;
+padding:16px;
+background:#000;
+background:#fff;
