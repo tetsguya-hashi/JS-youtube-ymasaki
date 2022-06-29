@@ -1,19 +1,26 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html>
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta charset="UTF-8" />
+  <title>FileAPI[image]</title>
+  <style>
+    #result {
+      width: 80%;
+      margin: 0px 0px 5px 0px;
+    }
+  </style>
 </head>
 
 <body>
-  <textarea id="editor">
-  </textarea>
-  <button id="save">Save</button>
-  <script src="https://cdn.ckeditor.com/ckeditor5/34.1.0/classic/ckeditor.js"></script>
-  <script src="src/editor.js"></script>
+  <h1>FileAPIで画像を読み込んだらconsoleで「img要素src属性」を確認すること！</h1> ファイル： <input id="file" name="file" type="file">
+  <input type="range" min="0" max="100" value="50" id="a1">
+  <img id="result">
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/camanjs/4.0.0/caman.full.min.js"></script>
+  <script>
+
+  </script>
+  <script src="src/file.js"></script>
 </body>
 
 </html>
