@@ -9,56 +9,7 @@
 </head>
 
 <body>
-  <div>
-    <div> 名前：<input type="text" id="uname"> </div>
-    <div>
-      <textarea id="text" cols="30" rows="10"></textarea>
-      <button id="send">送信</button>
-    </div>
-    <div id="output" style="overflow:auto;height:300px;border: 1px solid #000;"></div>
-  </div>
-  <!--/ コンテンツ表示画面 -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.8.4/firebase-app.js";
-    import { getDatabase, ref, push, set, onChildAdded, remove, onChildRemoved }
-      from "https://www.gstatic.com/firebasejs/9.8.4/firebase-database.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyDdiD4_fAsQwhK_63XwduSEsS8tjwAr-tg",
-      authDomain: "sample-e1044.firebaseapp.com",
-      projectId: "sample-e1044",
-      storageBucket: "sample-e1044.appspot.com",
-      messagingSenderId: "354889293862",
-      appId: "1:354889293862:web:4565fa125c7386dedfc6e7"
-    };
-
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const db = getDatabase(app); //RealtimeDBに接続
-    const dbRef = ref(db, "chat"); //RealtimeDB内の"chat"を使う
-
-    $("#send").on("click", function () {
-      const msg = {
-        uname: $("#uname").val(),
-        text: $("#text").val()
-      }
-      const newPostRef = push(dbRef); //ユニークKEYを生成
-      set(newPostRef, msg);           //"chat"にユニークKEYをつけてオブジェクトデータを登録
-    });
-
-    onChildAdded(dbRef, function (data) {
-      const msg = data.val();
-      const key = data.key;
-      let h = `<p>${msg.uname}<br>${msg.text}</p>`;
-      $('#output').append(h);
-    })
-  </script>
-  <script src="src/chat.js"></script>
+  <script src="src/algorithm.js"></script>
 </body>
 
 </html>
